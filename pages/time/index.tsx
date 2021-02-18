@@ -3,12 +3,13 @@ import Link from 'next/link';
 // import { Container } from './styles';
 
 interface Props {
-  staticDateString: string
+  staticDateString: string,
+  children?: unknown
 }
 
 const Time: React.FC = (props: Props) => {
   const dynamicDate = new Date();
-  const dynamicDateString = dynamicDate.toGMTString();
+  const dynamicDateString = dynamicDate.toUTCString();
 
   return (
   <>
@@ -29,7 +30,7 @@ const Time: React.FC = (props: Props) => {
 export const getStaticProps = () => {
   //Somente Ocorre no build
   const staticDate = new Date();
-  const staticDateString = staticDate.toGMTString();
+  const staticDateString = staticDate.toUTCString();
 
   return {
     props: {

@@ -3,7 +3,7 @@ const time = (request, response): void => {
 
   response.json(
     {
-      date: dynamicDate.toGMTString()
+      date: dynamicDate.toUTCString()
     }
   )
 }
