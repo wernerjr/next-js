@@ -3,14 +3,14 @@ import Link from 'next/link';
 
 // import { Container } from './styles';
 
-const Home: React.FC = () => {
+const About: React.FC = () => {
   return (
   <>
-    <h1>Home</h1>
-    <Link href="/about">
-      <a >Acessar pagina Sobre</a>
+    <h1>About</h1>
+    <Link href="/">
+      <a >Acessar pagina Home</a>
     </Link>
   </>);
 }
 
-export default Home;
+export default About;
