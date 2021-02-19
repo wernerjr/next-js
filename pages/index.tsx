@@ -1,7 +1,5 @@
 import Link from 'next/link';
 
-// import { Container } from './styles';
-
 const Home: React.FC = () => {
   return (
   <>
