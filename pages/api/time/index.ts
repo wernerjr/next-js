@@ -4,6 +4,9 @@ const time = async (request, response): Promise<void> => {
 
   const subscribersResponse = await fetch(`https://api.convertkit.com/v3/subscribers?api_secret=${apiSecret}`)
   const subscribersResponseJson = await subscribersResponse.json();
+  
+  response.setHeader('Cache-Control', 's-maxage=10, stale-while-revalidate');
+  
   response.json(
     {
       date: dynamicDate.toUTCString(),
